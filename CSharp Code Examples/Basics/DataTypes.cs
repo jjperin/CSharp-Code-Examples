@@ -18,27 +18,28 @@ namespace CSharp_Code_Examples
             string string_ = "abc";
             char char_ = 'A';
             bool bool_ = false;
+            Console.WriteLine("Datatypes: ");
             Console.WriteLine($"int: {int_}, double: {double_}, string: {string_}, char: {char_}, bool: {bool_}");
 
 
             //implicit casting 
-            Console.WriteLine("Implicit casting (Int to Double)");
+            Console.WriteLine("\n\nImplicit casting (Int to Double)");
             double implicitCasting = int_;
-            Console.WriteLine("Int implicitly casteded to a Double: " + implicitCasting);
+            Console.WriteLine("\nInt implicitly casteded to a Double: " + implicitCasting);
 
             //explicit casting
-            Console.WriteLine("Explicit casting (Double to Int)");
+            Console.WriteLine("\n\nExplicit casting (Double to Int)");
             int explicitCast = (int)double_;
-            Console.WriteLine("Double explicitly casted to an Int " + explicitCast);
+            Console.WriteLine("\nDouble explicitly casted to an Int " + explicitCast);
 
             //converting types
-            Console.WriteLine("Converting String to Int");
+            Console.WriteLine("\n\nConverting String to Int");
             string numberString = "123";
             int convertInt = Convert.ToInt32(numberString);
-            Console.WriteLine("String converted to an Int: " + convertInt);
+            Console.WriteLine("\nString converted to an Int: " + convertInt);
 
             //safe conversion
-            Console.WriteLine("Safe converting string to int, safely handle unparsable strings");
+            Console.WriteLine("\n\nSafe converting string to int, safely handle unparsable strings");
             string goodString = "456";
             string badString = "hello";
 
@@ -46,19 +47,17 @@ namespace CSharp_Code_Examples
             stringToIntParse(badString);
 
             Thread.Sleep(1000); //waits 1 second before going back to original menu
-            HelloLincoln.run();
-
         }
 
         static void stringToIntParse(string inputString)
         {
             if(int.TryParse(inputString, out int result))
             {
-                Console.WriteLine("String parsed to integer successfully: " + result);
+                Console.WriteLine("\nString parsed to integer successfully: " + result);
             }
             else
             {
-                Console.WriteLine("String " + inputString + " could not be parsed");
+                Console.WriteLine("\nString " + inputString + " could not be parsed");
             }
         }
     }

@@ -10,30 +10,37 @@ namespace CSharp_Code_Examples
     {
         //Authors: Mark Doughty, Jake Peringatt
         //Some mathematics function examples. Pythagoras, Law of Cosines, Circle Area, Quadratic Formula. 
+
+
         public static void run()
         {
-            Console.WriteLine("\nMaths Menu. Please type the number of the menu you want to open");
-            string[] menuItems = { "Pythagoras", "Law Of Cosines", "Circles", "Quadratic Formula", "Exit"};
-            int index = 1;
-            foreach (string item in menuItems)
-            {
-                Console.WriteLine(index + ". " + item);
-                index++;
-            }
 
-            string input = Console.ReadLine();
-
-            switch (input)
+            bool running = true;
+            while (running)
             {
-                case "1": Pythagoras(); break;
-                case "2": LawOfCosines(); break;
-                case "3": Circles(); break;
-                case "4": QuadraticFormula(); break;
-                case "5": HelloLincoln.run(); break;
-                default:
-                    Console.WriteLine("Invalid input, please try again.");
-                    run();
-                    break;
+                Console.WriteLine("\nMaths Menu. Please type the number of the menu you want to open");
+                string[] menuItems = { "Pythagoras", "Law Of Cosines", "Circles", "Quadratic Formula", "Exit" };
+                int index = 1;
+                foreach (string item in menuItems)
+                {
+                    Console.WriteLine(index + ". " + item);
+                    index++;
+                }
+
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1": Pythagoras(); break;
+                    case "2": LawOfCosines(); break;
+                    case "3": Circles(); break;
+                    case "4": QuadraticFormula(); break;
+                    case "5": running = false; break;
+                    default:
+                        Console.WriteLine("Invalid input, please try again.");
+                        run();
+                        break;
+                }
             }
         }
 
@@ -47,7 +54,6 @@ namespace CSharp_Code_Examples
             double Pythag_squared = Math.Pow(a, 2) + Math.Pow(b, 2);
             Console.WriteLine("Hypoteneuse = " + Math.Sqrt(Pythag_squared));
 
-            HelloLincoln.run();
 
         }
 
@@ -76,7 +82,6 @@ namespace CSharp_Code_Examples
             double LoC_squared = Math.Pow(a, 2) + Math.Pow(b, 2) - (2 * a * b * Math.Cos(cRad));
             Console.WriteLine("Unknown side is = " + Math.Round(Math.Sqrt(LoC_squared), 2));
 
-            HelloLincoln.run();
         }
 
         public static void Circles()
@@ -87,7 +92,6 @@ namespace CSharp_Code_Examples
             double area = Math.PI * Math.Pow(radius, 2);
             Console.WriteLine("The area of the circle is = " + Math.Round(area, 2));
 
-            HelloLincoln.run();
         }
 
         public static void QuadraticFormula()
@@ -125,7 +129,6 @@ namespace CSharp_Code_Examples
                 Console.WriteLine("No real quadratic roots exist");
             }
 
-            HelloLincoln.run();
         }
 
 

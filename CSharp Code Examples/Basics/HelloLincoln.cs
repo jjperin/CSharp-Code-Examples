@@ -13,10 +13,14 @@ namespace CSharp_Code_Examples
 
         public static void run()
         {
-            cliMenu();
+            bool running = true;
+            while (running)
+            {
+                running = cliMenu();
+            }
         }
 
-        public static void cliMenu()
+        public static bool cliMenu()
         {
             Console.WriteLine("\nC# Examples Menu. Please type the number of the menu you want to open");
             string[] menuItems = { "Maths", "DataTypes", "Classes", "Inheritance", "Collections", "Excepition Handling", "Exit" };
@@ -40,12 +44,14 @@ namespace CSharp_Code_Examples
                 case "7": 
                     Console.WriteLine("Press any key to exit");
                     Console.ReadKey();
+                    return false;
                     break;
                 default:
                     Console.WriteLine("Invalid input, please try again.");
                     cliMenu();
                     break;
             }
+            return true;  
         }
     }
 }
