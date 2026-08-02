@@ -18,7 +18,7 @@ namespace CSharp_Code_Examples
 
         public static void cliMenu()
         {
-            Console.WriteLine("\n C# Examples Menu. Please type the number of the menu you want to open");
+            Console.WriteLine("\nC# Examples Menu. Please type the number of the menu you want to open");
             string[] menuItems = { "Maths", "DataTypes", "Classes", "Inheritance", "Collections", "Excepition Handling", "Exit" };
             int index = 1;
             foreach (string item in menuItems)
