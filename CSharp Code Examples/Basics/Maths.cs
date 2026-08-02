@@ -33,6 +33,34 @@ namespace CSharp_Code_Examples
             double radius = 5;
             double area = Math.PI * Math.Pow(radius, 2);
             Console.WriteLine("The area of the circle is = " + Math.Round(area, 2));
+
+
+            //Quadratic Formula
+            //ax^2 + bx + c = 0 
+            //x = (-b +/- Sqrt(b^2 - 4ac)) / 2a
+
+            double quadA = 1;
+            double quadB = 0;
+            double quadC = -4;
+
+            //Discriminant = b^2 - 4ac
+            double discriminant = Math.Pow(quadB, 2) - (4 * quadA * quadC);
+
+            double root1 = (-quadB + Math.Sqrt(discriminant)) / (2 * quadA);
+
+            if (discriminant == 0)
+            {
+                Console.WriteLine("One quadratic root: " + root1);
+            }
+            else if (discriminant > 0)
+            {
+                double root2 = (-quadB - Math.Sqrt(discriminant)) / (2 * quadA);
+                Console.WriteLine("Two quadratic roots: " + root1 + ", " + root2);
+            }
+            else
+            {
+                Console.WriteLine("No real quadratic roots exist");
+            }
         }
     }
 }
