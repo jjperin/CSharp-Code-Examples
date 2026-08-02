@@ -10,17 +10,42 @@ namespace CSharp_Code_Examples
     {
         //Authors: Mark Doughty
         //Prints a string and shows todays date in the console
+
         public static void run()
         {
-            DateTime date = DateTime.Now;
-            Console.WriteLine("Hello Lincoln!");
-            Console.WriteLine("Today's date is " + date.ToLongDateString());
-            Maths.run();
-            DataTypes.run();
-            Classes.Classes.run();
-            Inheritance.Inheritance.run();
-            Collections.Collections.run();
-            Exception_Handling.ExceptionHandling.run();
+            cliMenu();
+        }
+
+        public static void cliMenu()
+        {
+            Console.WriteLine("\n C# Examples Menu. Please type the number of the menu you want to open");
+            string[] menuItems = { "Maths", "DataTypes", "Classes", "Inheritance", "Collections", "Excepition Handling", "Exit" };
+            int index = 1;
+            foreach (string item in menuItems)
+            {
+                Console.WriteLine(index + ". " + item);
+                index++;
+            }
+
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1": Maths.run(); break;
+                case "2": DataTypes.run(); break;
+                case "3": Classes.Classes.run(); break;
+                case "4": Inheritance.Inheritance.run(); break;
+                case "5": Collections.Collections.run(); break;
+                case "6": Exception_Handling.ExceptionHandling.run(); break;
+                case "7": 
+                    Console.WriteLine("Press any key to exit");
+                    Console.ReadKey();
+                    break;
+                default:
+                    Console.WriteLine("Invalid input, please try again.");
+                    cliMenu();
+                    break;
+            }
         }
     }
 }
