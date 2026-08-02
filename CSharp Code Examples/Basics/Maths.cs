@@ -46,14 +46,19 @@ namespace CSharp_Code_Examples
             //Discriminant = b^2 - 4ac
             double discriminant = Math.Pow(quadB, 2) - (4 * quadA * quadC);
 
-            double root1 = (-quadB + Math.Sqrt(discriminant)) / (2 * quadA);
 
-            if (discriminant == 0)
+            if(Math.Abs(quadA) < 0.000001) //floating point values can be inaccurate, so comparing directly to 0 may fail. this is to mitigate it.
             {
+                Console.WriteLine("Not a quadratic");
+            }
+            else if (Math.Abs(discriminant) < 0.000001)
+            {
+                double root1 = (-quadB + Math.Sqrt(discriminant)) / (2 * quadA);
                 Console.WriteLine("One quadratic root: " + root1);
             }
-            else if (discriminant > 0)
+            else if (discriminant > 0.000001)
             {
+                double root1 = (-quadB + Math.Sqrt(discriminant)) / (2 * quadA);
                 double root2 = (-quadB - Math.Sqrt(discriminant)) / (2 * quadA);
                 Console.WriteLine("Two quadratic roots: " + root1 + ", " + root2);
             }
