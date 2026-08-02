@@ -45,7 +45,6 @@ namespace CSharp_Code_Examples
                     Console.WriteLine("Press any key to exit");
                     Console.ReadKey();
                     return false;
-                    break;
                 default:
                     Console.WriteLine("Invalid input, please try again.");
                     cliMenu();
