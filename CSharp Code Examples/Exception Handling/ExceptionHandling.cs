@@ -20,7 +20,7 @@ namespace CSharp_Code_Examples.Exception_Handling
                 try
                 {
                     int result = 24 / number;
-                    Console.WriteLine($"4 / {number} = {result}");
+                    Console.WriteLine($"24 / {number} = {result}");
                 }
                 catch (DivideByZeroException e)
                 {
