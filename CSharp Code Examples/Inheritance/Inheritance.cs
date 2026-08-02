@@ -14,10 +14,14 @@ namespace CSharp_Code_Examples.Inheritance
         //Demonstrates inheritance, through a Dog class which inherits from Animal
         public static void run()
         {
+            Console.WriteLine("\nCreating a Dog, the Dog class inherits from the Animal Class");
+            Console.WriteLine("The dog will be a golden retriever who is called Lucky, and is 4 years old. No spots\n");
             Dog dog1 = new Dog("Lucky", 4, "Golden Retriever", false);
+            Console.WriteLine("The dog has been created");
             dog1.Sound();
             dog1.Sit();
             dog1.Describe();
+            Console.WriteLine();
         }
     }
 

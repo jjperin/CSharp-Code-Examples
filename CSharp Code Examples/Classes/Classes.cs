@@ -14,8 +14,13 @@ namespace CSharp_Code_Examples.Classes
 
         public static void run()
         {
+            Console.WriteLine("\nCreating an animal called Jeff, who is 3 years old");
             Animal animal1 = new Animal("Jeff", 3);
+            Console.WriteLine("Animal created:");
+            Console.WriteLine($"{animal1.name} + is an animal, who is {animal1.age} year/s old");
             animal1.Sound();
+            Console.WriteLine();
+
         }
     }
 

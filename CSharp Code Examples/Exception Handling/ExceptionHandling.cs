@@ -13,6 +13,7 @@ namespace CSharp_Code_Examples.Exception_Handling
 
         public static void run()
         {
+            Console.WriteLine("\nAn array of numbers, testing exception handling. The division by 0 should throw an error.");
             int[] numbers = { 0, 2, 4, 6, 8};
             foreach (int number in numbers)
             {
@@ -26,6 +27,7 @@ namespace CSharp_Code_Examples.Exception_Handling
                     Console.WriteLine("Cannot divide by Zero: " + e.Message);
                 }
             }
+            Console.WriteLine();
         }
     }
 }
