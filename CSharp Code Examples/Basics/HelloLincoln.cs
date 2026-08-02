@@ -1,5 +1,4 @@
-﻿using CSharp_Code_Examples.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +18,7 @@ namespace CSharp_Code_Examples
             Maths.run();
             DataTypes.run();
             Classes.Classes.run();
+            Inheritance.Inheritance.run();
         }
     }
 }
