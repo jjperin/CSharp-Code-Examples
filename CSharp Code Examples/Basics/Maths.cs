@@ -38,7 +38,6 @@ namespace CSharp_Code_Examples
                     case "5": running = false; break;
                     default:
                         Console.WriteLine("Invalid input, please try again.");
-                        run();
                         break;
                 }
             }
