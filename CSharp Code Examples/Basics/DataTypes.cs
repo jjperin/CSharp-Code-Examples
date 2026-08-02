@@ -22,25 +22,31 @@ namespace CSharp_Code_Examples
 
 
             //implicit casting 
+            Console.WriteLine("Implicit casting (Int to Double)");
             double implicitCasting = int_;
             Console.WriteLine("Int implicitly casteded to a Double: " + implicitCasting);
 
             //explicit casting
+            Console.WriteLine("Explicit casting (Double to Int)");
             int explicitCast = (int)double_;
             Console.WriteLine("Double explicitly casted to an Int " + explicitCast);
 
             //converting types
-
+            Console.WriteLine("Converting String to Int");
             string numberString = "123";
             int convertInt = Convert.ToInt32(numberString);
             Console.WriteLine("String converted to an Int: " + convertInt);
 
             //safe conversion
+            Console.WriteLine("Safe converting string to int, safely handle unparsable strings");
             string goodString = "456";
             string badString = "hello";
 
             stringToIntParse(goodString);
             stringToIntParse(badString);
+
+            Thread.Sleep(1000); //waits 1 second before going back to original menu
+            HelloLincoln.run();
 
         }
 
