@@ -47,7 +47,6 @@ namespace CSharp_Code_Examples
                     return false;
                 default:
                     Console.WriteLine("Invalid input, please try again.");
-                    cliMenu();
                     break;
             }
             return true;  
