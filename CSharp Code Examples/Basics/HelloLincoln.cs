@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp_Code_Examples.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,9 @@ namespace CSharp_Code_Examples
             DateTime date = DateTime.Now;
             Console.WriteLine("Hello Lincoln!");
             Console.WriteLine("Today's date is " + date.ToLongDateString());
+            Maths.run();
+            DataTypes.run();
+            Classes.Classes.run();
         }
     }
 }
