@@ -19,6 +19,8 @@ namespace CSharp_Code_Examples
             DataTypes.run();
             Classes.Classes.run();
             Inheritance.Inheritance.run();
+            Collections.Collections.run();
+            Exception_Handling.ExceptionHandling.run();
         }
     }
 }
