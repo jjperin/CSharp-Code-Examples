@@ -26,6 +26,13 @@ namespace CSharp_Code_Examples
             double cRad = C * Math.PI / 180; 
             double LoC_squared = Math.Pow(a, 2) + Math.Pow(b, 2) - (2 * a * b * Math.Cos(cRad));
             Console.WriteLine("Unknown side is = " + Math.Round(Math.Sqrt(LoC_squared), 2));
+
+
+            //Circles
+            //PI * R^2
+            double radius = 5;
+            double area = Math.PI * Math.Pow(radius, 2);
+            Console.WriteLine("The area of the circle is = " + Math.Round(area, 2));
         }
     }
 }
