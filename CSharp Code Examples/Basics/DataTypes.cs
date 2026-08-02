@@ -9,7 +9,7 @@ namespace CSharp_Code_Examples
     class DataTypes
     {
         //Authors: Mark Doughty, Jake Peringatt
-        //Some data type uses in C#
+        //Some data type uses in C#, casting and conversion
         public static void run()
         {
             //basic variables

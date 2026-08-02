@@ -9,7 +9,7 @@ namespace CSharp_Code_Examples
     class Maths
     {
         //Authors: Mark Doughty, Jake Peringatt
-        //Some mathematics function examples
+        //Some mathematics function examples. Pythagoras, Law of Cosines, Circle Area, Quadratic Formula. 
         public static void run()
         {
             //Pythagoras
