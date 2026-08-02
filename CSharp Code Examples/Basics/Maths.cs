@@ -23,7 +23,8 @@ namespace CSharp_Code_Examples
             //C is the angle opposite c
             //c^2 = a^2 + b^2 - 2*a*b*cos(C)
             double C = 40.0;
-            double LoC_squared = Math.Pow(a, 2) + Math.Pow(b, 2) - (2 * a * b * Math.Cos(C));
+            double cRad = C * Math.PI / 180; 
+            double LoC_squared = Math.Pow(a, 2) + Math.Pow(b, 2) - (2 * a * b * Math.Cos(cRad));
             Console.WriteLine("Unknown side is = " + Math.Round(Math.Sqrt(LoC_squared), 2));
         }
     }
