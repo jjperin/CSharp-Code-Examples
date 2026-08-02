@@ -35,6 +35,25 @@ namespace CSharp_Code_Examples
             int convertInt = Convert.ToInt32(numberString);
             Console.WriteLine("String converted to an Int: " + convertInt);
 
+            //safe conversion
+            string goodString = "456";
+            string badString = "hello";
+
+            stringToIntParse(goodString);
+            stringToIntParse(badString);
+
+        }
+
+        static void stringToIntParse(string inputString)
+        {
+            if(int.TryParse(inputString, out int result))
+            {
+                Console.WriteLine("String parsed to integer successfully: " + result);
+            }
+            else
+            {
+                Console.WriteLine("String " + inputString + " could not be parsed");
+            }
         }
     }
 }
