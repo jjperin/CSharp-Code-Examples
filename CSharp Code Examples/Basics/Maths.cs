@@ -8,7 +8,7 @@ namespace CSharp_Code_Examples
 {
     class Maths
     {
-        //Authors: Mark Doughty
+        //Authors: Mark Doughty, Jake Peringatt
         //Some mathematics function examples
         public static void run()
         {
