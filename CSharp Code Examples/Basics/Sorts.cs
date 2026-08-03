@@ -26,13 +26,14 @@ namespace CSharp_Code_Examples.Basics
             int[] num2 = (int[])num1.Clone();
 
             Console.WriteLine("Sorting algorithms:");
-
+            Console.WriteLine($"We have an array of {num1.Length} items to sort through");
             Console.WriteLine("Bubble Sort");
             Console.WriteLine("Tap any key to Sort...");
             Console.ReadKey();
             Console.WriteLine();
 
-
+            long bubbleSortTime;
+            long mergeSortTime;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             BubbleSort(num1);
@@ -42,7 +43,7 @@ namespace CSharp_Code_Examples.Basics
 
             Console.WriteLine("Time elapsed to sort(ticks): " + stopwatch.ElapsedTicks);
             Console.WriteLine("Time elapsed to sort(ms): " + stopwatch.ElapsedMilliseconds);
-
+            bubbleSortTime = stopwatch.ElapsedTicks;
 
             Console.WriteLine();
             Console.WriteLine("Merge Sort");
@@ -59,7 +60,20 @@ namespace CSharp_Code_Examples.Basics
 
             Console.WriteLine("Time elapsed to sort(ticks): " + stopwatch.ElapsedTicks);
             Console.WriteLine("Time elapsed to sort(ms): " + stopwatch.ElapsedMilliseconds);
+            mergeSortTime = stopwatch.ElapsedTicks;
+            if (mergeSortTime < bubbleSortTime)
+            {
+                double factor = (double)bubbleSortTime / mergeSortTime;
+                Console.WriteLine($"Merge Sort is {Math.Round(factor, 2)}x faster than Bubble Sort");
+            }
+            else
+            {
+                double factor = (double)mergeSortTime / bubbleSortTime;
 
+                Console.WriteLine($"Bubble Sort is {Math.Round(factor, 2)}x faster than Merge Sort");
+            }
+            Console.WriteLine("Tap any key to go back to menu");
+            Console.ReadKey();
 
 
         }
@@ -74,11 +88,11 @@ namespace CSharp_Code_Examples.Basics
                     {
                         int temp = array[j];
                         array[j] = array[j + 1];
-                        array[j+1] = temp;
+                        array[j + 1] = temp;
                     }
                 }
             }
-            
+
         }
 
         public static void MergeSort(int[] array, int left, int right)
