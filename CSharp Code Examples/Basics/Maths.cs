@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp_Code_Examples
 {
-    class Maths
+    public class Maths
     {
         //Authors: Mark Doughty, Jake Peringatt
         //Some mathematics function examples. Pythagoras, Law of Cosines, Circle Area, Quadratic Formula. 
