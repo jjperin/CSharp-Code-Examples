@@ -14,6 +14,10 @@ namespace CSharp_Code_Examples
 
         public static void run()
         {
+            DateTime date = DateTime.Now;
+            Console.WriteLine("Hello Lincoln!");
+            Console.WriteLine("Today's date is " + date.ToLongDateString());
+
             bool running = true;
             while (running)
             {
